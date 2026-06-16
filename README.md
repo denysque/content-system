@@ -27,6 +27,7 @@
 - **Anthropic Claude Sonnet 4.6** — генерация (серверный route `/api/generate`)
 - **Supabase** — авторизация magic link + хранение (таблица `event_systems`, RLS)
 - **Vercel** — хостинг + Web Analytics
+- **PWA** — устанавливаемое приложение (манифест + service worker, нативно, без зависимостей)
 
 ## Запуск локально
 

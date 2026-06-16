@@ -68,6 +68,20 @@ vercel --prod --yes        # из корня репозитория content-syst
 - `components/ContentCard.jsx` — карточка формата (badge, leverage-кольцо, копирование).
   Формат карточки: `{ id, badge, format, accent: "plasma"|"electric", leverage, title, body }`.
 
+## PWA
+
+Приложение — устанавливаемая PWA (нативный подход Next.js, без сторонних библиотек):
+- `app/manifest.js` — Web App Manifest (route `/manifest.webmanifest`).
+- `public/sw.js` — минимальный service worker: офлайн-фолбэк для навигации,
+  network-first; НЕ кэширует `/api/*` и `/_vercel/*`.
+- `components/ServiceWorker.jsx` — регистрация SW (только в проде), подключён в layout.
+- `public/icon-*.png`, `apple-touch-icon.png`, `favicon-32.png` — иконки (192/512/maskable/180/32).
+- `public/offline.html` — запасная страница без сети.
+- iOS/theme-метаданные — в `app/layout.jsx` (`metadata.appleWebApp`, `viewport.themeColor`).
+
+Иконки сгенерированы из фирменного знака скриптом Pillow (см. историю). Чтобы
+перегенерировать — нарисовать заново и заменить PNG в `public/` (размеры не менять).
+
 ## Принципы кодовой базы
 
 - поддерживать кодовую базу в высокомодульном состоянии и с хорошей документацией
