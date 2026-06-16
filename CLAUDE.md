@@ -68,6 +68,11 @@ vercel --prod --yes        # из корня репозитория content-syst
 - `components/ContentCard.jsx` — карточка формата (badge, leverage-кольцо, копирование).
   Формат карточки: `{ id, badge, format, accent: "plasma"|"electric", leverage, title, body }`.
 
+## Принципы кодовой базы
+
+- поддерживать кодовую базу в высокомодульном состоянии и с хорошей документацией
+- следовать принципу «разделения ответственности» (separation of concerns)
+
 ## Конвенции
 
 - Тёмная тема: graphite-фон, акценты `plasma` (фиолетовый) / `electric` (синий) —
